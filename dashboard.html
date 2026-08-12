@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard | AgriGrow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        secondary: '#065f46',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Sidebar -->
+    <aside class="fixed left-0 top-0 h-screen w-64 bg-secondary text-white p-6 hidden lg:block">
+        <div class="flex items-center space-x-2 mb-10">
+            <div class="bg-primary p-2 rounded-lg">
+                <i class="fas fa-seedling text-white text-xl"></i>
+            </div>
+            <span class="text-2xl font-bold tracking-tight">AgriGrow</span>
+        </div>
+        
+        <nav class="space-y-4">
+            <a href="dashboard.html" class="flex items-center space-x-3 p-3 bg-primary rounded-xl transition">
+                <i class="fas fa-chart-line"></i>
+                <span class="font-semibold">Sales Overview</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 p-3 hover:bg-white/10 rounded-xl transition">
+                <i class="fas fa-box"></i>
+                <span>My Listings</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 p-3 hover:bg-white/10 rounded-xl transition">
+                <i class="fas fa-shopping-basket"></i>
+                <span>Orders</span>
+            </a>
+            <a href="#" class="flex items-center space-x-3 p-3 hover:bg-white/10 rounded-xl transition">
+                <i class="fas fa-wallet"></i>
+                <span>Earnings</span>
+            </a>
+            <div class="pt-10">
+                <a href="index.html" class="flex items-center space-x-3 p-3 text-emerald-300 hover:text-white transition">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Back to Site</span>
+                </a>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="lg:ml-64 p-8">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-10">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-800">Welcome back, Farmer John!</h1>
+                <p class="text-gray-500">Here's what's happening with your farm today.</p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="bg-white p-2 rounded-lg shadow-sm text-gray-400 hover:text-primary">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <div class="flex items-center space-x-3 bg-white p-2 px-4 rounded-xl shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" alt="Profile" class="w-8 h-8 rounded-full border-2 border-primary">
+                    <span class="font-bold text-gray-700">John Doe</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+            <!-- Weather Widget -->
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 md:col-span-1">
+                <a class="weatherwidget-io" href="https://forecast7.com/en/n12d9777d59/bengaluru/" data-label_1="FARM WEATHER" data-label_2="LOCAL FORECAST" data-font="Roboto" data-icons="Climacons Animated" data-mode="Current" data-theme="pure" >FARM WEATHER</a>
+                <script>
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                </script>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 bg-emerald-50 text-primary rounded-xl">
+                        <i class="fas fa-dollar-sign text-xl"></i>
+                    </div>
+                    <span class="text-emerald-500 text-sm font-bold">+12.5%</span>
+                </div>
+                <div class="text-gray-500 text-sm font-medium">Total Revenue</div>
+                <div class="text-2xl font-bold text-gray-800">$4,250.00</div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 bg-orange-50 text-accent rounded-xl">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                    </div>
+                    <span class="text-emerald-500 text-sm font-bold">+5%</span>
+                </div>
+                <div class="text-gray-500 text-sm font-medium">Total Orders</div>
+                <div class="text-2xl font-bold text-gray-800">142</div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="p-3 bg-blue-50 text-blue-500 rounded-xl">
+                        <i class="fas fa-users text-xl"></i>
+                    </div>
+                    <span class="text-gray-400 text-sm font-bold">Stable</span>
+                </div>
+                <div class="text-gray-500 text-sm font-medium">Unique Buyers</div>
+                <div class="text-2xl font-bold text-gray-800">89</div>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                <h3 class="text-lg font-bold mb-6 text-gray-800">Sales Performance (Weekly)</h3>
+                <div style="max-height: 300px;">
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+                <h3 class="text-lg font-bold mb-6 text-gray-800">Produce Distribution</h3>
+                <div style="max-height: 300px;" class="flex justify-center">
+                    <canvas id="produceChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Transactions -->
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+            <div class="flex justify-between items-center mb-8">
+                <h3 class="text-lg font-bold text-gray-800">Recent Transactions</h3>
+                <button class="text-primary font-bold text-sm hover:underline">Download CSV</button>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="text-gray-400 text-sm border-b border-gray-50">
+                            <th class="pb-4 font-medium">Product</th>
+                            <th class="pb-4 font-medium">Buyer</th>
+                            <th class="pb-4 font-medium">Date</th>
+                            <th class="pb-4 font-medium">Status</th>
+                            <th class="pb-4 font-medium">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr class="border-b border-gray-50">
+                            <td class="py-4">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-corn text-primary"></i>
+                                    </div>
+                                    <span class="font-bold">Organic Maize</span>
+                                </div>
+                            </td>
+                            <td class="py-4">Retail Hub X</td>
+                            <td class="py-4 text-sm">Feb 12, 2026</td>
+                            <td class="py-4">
+                                <span class="px-3 py-1 bg-emerald-100 text-emerald-600 text-xs font-bold rounded-full">Completed</span>
+                            </td>
+                            <td class="py-4 font-bold">$1,200.00</td>
+                        </tr>
+                        <tr class="border-b border-gray-50">
+                            <td class="py-4">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-apple-whole text-accent"></i>
+                                    </div>
+                                    <span class="font-bold">Fresh Apples</span>
+                                </div>
+                            </td>
+                            <td class="py-4">Local Market Z</td>
+                            <td class="py-4 text-sm">Feb 11, 2026</td>
+                            <td class="py-4">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-xs font-bold rounded-full">Pending</span>
+                            </td>
+                            <td class="py-4 font-bold">$450.00</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-carrot text-orange-500"></i>
+                                    </div>
+                                    <span class="font-bold">Dutch Carrots</span>
+                                </div>
+                            </td>
+                            <td class="py-4">Green Grocers Co.</td>
+                            <td class="py-4 text-sm">Feb 10, 2026</td>
+                            <td class="py-4">
+                                <span class="px-3 py-1 bg-emerald-100 text-emerald-600 text-xs font-bold rounded-full">Completed</span>
+                            </td>
+                            <td class="py-4 font-bold">$890.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Sales Performance Chart
+        const salesCtx = document.getElementById('salesChart').getContext('2d');
+        new Chart(salesCtx, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                datasets: [{
+                    label: 'Sales ($)',
+                    data: [450, 600, 520, 850, 950, 400, 480],
+                    borderColor: '#10b981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    borderWidth: 3,
+                    pointRadius: 4,
+                    pointBackgroundColor: '#fff',
+                    pointBorderColor: '#10b981',
+                    pointBorderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: { beginAtZero: true, grid: { display: false } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // Produce Distribution Chart
+        const produceCtx = document.getElementById('produceChart').getContext('2d');
+        new Chart(produceCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Maize', 'Vegetables', 'Fruits', 'Others'],
+                datasets: [{
+                    data: [45, 25, 20, 10],
+                    backgroundColor: ['#10b981', '#f59e0b', '#3b82f6', '#94a3b8'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' }
+                },
+                cutout: '70%'
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriGrow | Farmers Registration & Marketplace</title>
+    <meta name="description" content="Empowering farmers with direct market access and high-quality agricultural inputs. Join the digital revolution of farming.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        secondary: '#065f46',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- Header & Navigation -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <div class="bg-primary p-2 rounded-lg">
+                    <i class="fas fa-seedling text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold text-secondary tracking-tight">AgriGrow</span>
+            </a>
+            
+            <ul class="hidden md:flex space-x-8 font-medium">
+                <li><a href="#home" class="hover:text-primary transition">Home</a></li>
+                <li><a href="#marketplace" class="hover:text-primary transition">Marketplace</a></li>
+                <li><a href="#farmers" class="hover:text-primary transition">For Farmers</a></li>
+                <li><a href="#about" class="hover:text-primary transition">About</a></li>
+                <li><a href="dashboard.html" class="text-primary font-bold hover:text-secondary transition">Dashboard</a></li>
+                <li><a href="insights.html" class="hover:text-primary transition">Insights</a></li>
+                <li><a href="help.html" class="hover:text-primary transition">Help</a></li>
+            </ul>
+
+            <div class="flex items-center space-x-4">
+                <a href="#registration" class="hidden sm:block bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-secondary transition shadow-lg shadow-primary/20">
+                    Register Now
+                </a>
+                <button class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2000" alt="Green agricultural field" class="w-full h-full object-cover brightness-50">
+        </div>
+        <div class="container mx-auto px-4 relative z-10 text-white text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                Empowering the Future of <br><span class="text-primary">Sustainable Farming</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-gray-200">
+                Connect directly with buyers, access certified seeds, and modernize your farm with the most advanced digital marketplace for agriculture in 2026.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#marketplace" class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition shadow-xl shadow-primary/30">
+                    Browse Marketplace
+                </a>
+                <a href="#registration" class="bg-white text-secondary px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-xl">
+                    Farmer Onboarding
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white border-b">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl font-bold text-primary mb-1">25k+</div>
+                    <div class="text-gray-500 font-medium">Registered Farmers</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-primary mb-1">150+</div>
+                    <div class="text-gray-500 font-medium">Certified Suppliers</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-primary mb-1">500+</div>
+                    <div class="text-gray-500 font-medium">Daily Transactions</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-primary mb-1">12</div>
+                    <div class="text-gray-500 font-medium">Countries Reached</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Why Choose AgriGrow?</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition group">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fas fa-handshake text-2xl text-primary group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-secondary">Direct Marketplace</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Eliminate middlemen and sell your produce directly to retailers and wholesalers at the best market prices.
+                    </p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition group">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fas fa-shield-check text-2xl text-primary group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-secondary">Certified Inputs</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Access high-quality seeds, fertilizers, and equipment from verified global suppliers with quality guarantees.
+                    </p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition group">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <i class="fas fa-chart-line text-2xl text-primary group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-secondary">Smart Analytics</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Get data-driven insights on market trends, weather patterns, and soil health to optimize your yields.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketplace Preview -->
+    <section id="marketplace" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-secondary mb-2">Featured Products</h2>
+                    <p class="text-gray-500">Shop from our premium selection of agricultural essentials.</p>
+                </div>
+                <a href="#" class="text-primary font-bold hover:underline flex items-center">
+                    View All <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                </a>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=600" alt="Hybrid Seeds" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-primary uppercase tracking-wider">Seeds</span>
+                        <h4 class="text-lg font-bold mt-1 mb-2">Hybrid Maize X-200</h4>
+                        <div class="flex justify-between items-center">
+                            <span class="text-secondary font-extrabold text-xl">$45.00</span>
+                            <button class="bg-gray-100 p-2 rounded-lg hover:bg-primary hover:text-white transition">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&q=80&w=600" alt="Irrigation Kit" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-accent uppercase tracking-wider">Equipment</span>
+                        <h4 class="text-lg font-bold mt-1 mb-2">Smart Drip Kit</h4>
+                        <div class="flex justify-between items-center">
+                            <span class="text-secondary font-extrabold text-xl">$120.00</span>
+                            <button class="bg-gray-100 p-2 rounded-lg hover:bg-primary hover:text-white transition">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&q=80&w=600" alt="Organic Fertilizer" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-primary uppercase tracking-wider">Inputs</span>
+                        <h4 class="text-lg font-bold mt-1 mb-2">Eco-Rich Organic Mix</h4>
+                        <div class="flex justify-between items-center">
+                            <span class="text-secondary font-extrabold text-xl">$29.99</span>
+                            <button class="bg-gray-100 p-2 rounded-lg hover:bg-primary hover:text-white transition">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-lg transition">
+                    <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&q=80&w=600" alt="Tools" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-accent uppercase tracking-wider">Tools</span>
+                        <h4 class="text-lg font-bold mt-1 mb-2">Precision Hoe Set</h4>
+                        <div class="flex justify-between items-center">
+                            <span class="text-secondary font-extrabold text-xl">$55.50</span>
+                            <button class="bg-gray-100 p-2 rounded-lg hover:bg-primary hover:text-white transition">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration" class="py-20 bg-emerald-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <h2 class="text-4xl font-extrabold mb-6 leading-tight">Join Our Growing Community of Farmers</h2>
+                    <p class="text-emerald-100 text-lg mb-8 leading-relaxed">
+                        Registration is free and only takes 2 minutes. Get instant access to:
+                    </p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-center space-x-3">
+                            <div class="bg-primary/20 p-1 rounded-full"><i class="fas fa-check text-primary"></i></div>
+                            <span>Personalized Farmer Dashboard</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="bg-primary/20 p-1 rounded-full"><i class="fas fa-check text-primary"></i></div>
+                            <span>Direct Listing for your Harvest</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="bg-primary/20 p-1 rounded-full"><i class="fas fa-check text-primary"></i></div>
+                            <span>Exclusive Subsidized Input Offers</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="bg-primary/20 p-1 rounded-full"><i class="fas fa-check text-primary"></i></div>
+                            <span>Agri-Advisory & Market Trends</span>
+                        </li>
+                    </ul>
+                    <img src="https://images.unsplash.com/photo-1592982537447-6f2a6a0c7c18?auto=format&fit=crop&q=80&w=800" alt="Farmer using mobile" class="rounded-3xl shadow-2xl brightness-90">
+                </div>
+                
+                <div class="lg:w-1/2 w-full">
+                    <div class="bg-white text-gray-900 p-10 rounded-3xl shadow-2xl">
+                        <h3 class="text-2xl font-bold mb-8 text-secondary">Register as a Farmer</h3>
+                        <form id="farmerForm" class="space-y-6">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-bold mb-2">First Name</label>
+                                    <input type="text" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none transition" placeholder="John">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold mb-2">Last Name</label>
+                                    <input type="text" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none transition" placeholder="Doe">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2">Phone Number</label>
+                                <input type="tel" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none transition" placeholder="+1 (555) 000-0000">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2">Farm Location</label>
+                                <input type="text" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none transition" placeholder="City, Region">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2">Primary Crop/Produce</label>
+                                <select class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary focus:outline-none transition">
+                                    <option>Maize/Corn</option>
+                                    <option>Wheat</option>
+                                    <option>Vegetables</option>
+                                    <option>Fruits</option>
+                                    <option>Livestock</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-secondary transition shadow-lg shadow-primary/20">
+                                Complete Registration
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-secondary mb-4">Farmer Success Stories</h2>
+                <p class="text-gray-500">Real impact from our community.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl relative">
+                    <i class="fas fa-quote-left text-primary/20 text-5xl absolute top-6 left-6"></i>
+                    <p class="text-lg italic text-gray-700 relative z-10 mb-6">
+                        "AgriGrow has completely changed how I sell my maize. I get 20% more profit now that I can connect directly with the cereal board through the platform."
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" alt="Farmer" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <div class="font-bold text-secondary">Samuel Maina</div>
+                            <div class="text-sm text-gray-500">Maize Farmer, Central Region</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl relative">
+                    <i class="fas fa-quote-left text-primary/20 text-5xl absolute top-6 left-6"></i>
+                    <p class="text-lg italic text-gray-700 relative z-10 mb-6">
+                        "Finding genuine seeds was always a gamble. With the AgriGrow marketplace, I can see certifications and reviews before I buy. My yield has improved significantly."
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=100" alt="Farmer" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <div class="font-bold text-secondary">Elena Rodriguez</div>
+                            <div class="text-sm text-gray-500">Vegetable Producer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="bg-primary p-2 rounded-lg">
+                            <i class="fas fa-seedling text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold tracking-tight">AgriGrow</span>
+                    </div>
+                    <p class="text-emerald-100/70 leading-relaxed mb-6">
+                        Building a transparent and efficient ecosystem for the world's most important industry.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-emerald-100 hover:text-white transition"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-emerald-100 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-emerald-100 hover:text-white transition"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-emerald-100/70">
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">How it Works</a></li>
+                        <li><a href="#" class="hover:text-white transition">Marketplace</a></li>
+                        <li><a href="#" class="hover:text-white transition">News & Advice</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Support</h4>
+                    <ul class="space-y-4 text-emerald-100/70">
+                        <li><a href="help.html" class="hover:text-white transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="font-bold mb-6">Newsletter</h4>
+                    <p class="text-sm text-emerald-100/70 mb-4">Get the latest market updates and farm tips.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email" class="bg-emerald-800/50 border border-emerald-700 px-4 py-2 rounded-l-lg focus:outline-none w-full">
+                        <button class="bg-primary px-4 py-2 rounded-r-lg hover:bg-emerald-500 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-emerald-800 text-center text-sm text-emerald-100/50">
+                &copy; 2026 AgriGrow Digital Agriculture. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

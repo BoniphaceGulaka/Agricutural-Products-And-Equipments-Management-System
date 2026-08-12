@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center | AgriGrow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10b981',
+                        secondary: '#065f46',
+                        accent: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="bg-primary p-2 rounded-lg">
+                    <i class="fas fa-seedling text-white text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold text-secondary tracking-tight">AgriGrow</span>
+            </a>
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="text-gray-600 hover:text-primary font-medium transition">Back to Home</a>
+                <a href="dashboard.html" class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-secondary transition">Dashboard</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Help Hero -->
+    <section class="bg-secondary py-16 text-white text-center">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-extrabold mb-4">How can we help you today?</h1>
+            <p class="text-emerald-100 mb-8 max-w-2xl mx-auto">Find answers to frequently asked questions about registration, selling, and buying on AgriGrow.</p>
+            <div class="max-w-xl mx-auto relative">
+                <input type="text" placeholder="Search for answers..." class="w-full px-6 py-4 rounded-full text-gray-900 focus:outline-none shadow-xl">
+                <button class="absolute right-2 top-2 bg-primary p-2 px-6 rounded-full hover:bg-emerald-500 transition">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user-plus text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Getting Started</h3>
+                    <p class="text-gray-500 text-sm">Learn how to create an account and complete your farmer profile.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center border border-gray-100">
+                    <div class="w-16 h-16 bg-emerald-50 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-store text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Selling & Listings</h3>
+                    <p class="text-gray-500 text-sm">Everything you need to know about listing your produce for sale.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition text-center border border-gray-100">
+                    <div class="w-16 h-16 bg-orange-50 text-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-credit-card text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Payments & Safety</h3>
+                    <p class="text-gray-500 text-sm">Secure transactions, escrow services, and buyer protection.</p>
+                </div>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-secondary mb-12">Frequently Asked Questions</h2>
+                
+                <div class="space-y-4">
+                    <!-- FAQ 1 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                        <button class="w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(1)">
+                            <span class="font-bold text-lg text-gray-800">Is registration free for farmers?</span>
+                            <i id="icon-1" class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                        </button>
+                        <div id="faq-1" class="hidden px-8 pb-6 text-gray-600 leading-relaxed">
+                            Yes! Registration is completely free for all farmers. We only charge a small transaction fee (2.5%) when you successfully sell your produce through our marketplace.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                        <button class="w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(2)">
+                            <span class="font-bold text-lg text-gray-800">How do I list my harvest?</span>
+                            <i id="icon-2" class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                        </button>
+                        <div id="faq-2" class="hidden px-8 pb-6 text-gray-600 leading-relaxed">
+                            Once logged into your dashboard, click on "My Listings" and then "Add New Product." You'll need to upload photos of your produce, specify the quantity, set a price, and add a description.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                        <button class="w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(3)">
+                            <span class="font-bold text-lg text-gray-800">How are payments handled?</span>
+                            <i id="icon-3" class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                        </button>
+                        <div id="faq-3" class="hidden px-8 pb-6 text-gray-600 leading-relaxed">
+                            AgriGrow uses a secure escrow system. When a buyer purchases your produce, the funds are held by AgriGrow. Once the buyer confirms delivery, the funds are instantly released to your wallet.
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                        <button class="w-full px-8 py-6 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(4)">
+                            <span class="font-bold text-lg text-gray-800">Can I buy seeds and tools here too?</span>
+                            <i id="icon-4" class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                        </button>
+                        <div id="faq-4" class="hidden px-8 pb-6 text-gray-600 leading-relaxed">
+                            Absolutely! The AgriGrow Marketplace features certified seeds, high-quality fertilizers, and modern farming equipment from verified global suppliers.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Contact -->
+    <section class="py-16 bg-emerald-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-secondary mb-4">Still have questions?</h2>
+            <p class="text-gray-600 mb-8">Our support team is available 24/7 to help you grow your farm business.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="mailto:support@agrigrow.com" class="bg-white border-2 border-primary text-primary px-8 py-3 rounded-xl font-bold hover:bg-primary hover:text-white transition">
+                    <i class="fas fa-envelope mr-2"></i> Email Support
+                </a>
+                <a href="#" class="bg-primary text-white px-8 py-3 rounded-xl font-bold hover:bg-secondary transition shadow-lg shadow-primary/20">
+                    <i class="fas fa-comment-alt mr-2"></i> Live Chat
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-secondary text-white py-8 text-center border-t border-emerald-800">
+        <p class="text-sm text-emerald-100/50">&copy; 2026 AgriGrow Digital Agriculture. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleFaq(id) {
+            const content = document.getElementById(`faq-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+    </script>
+</body>
+</html>
